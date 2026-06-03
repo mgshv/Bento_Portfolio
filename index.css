@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; border: 0; cursor: pointer; }
+
+:root {
+  --bg: #eaf2f5;
+  --card: #ffffff;
+  --text: #101418;
+  --muted: rgba(16, 20, 24, 0.62);
+  --line: rgba(16, 20, 24, 0.1);
+  --accent: #b8ff4d;
+  --linkedin: #96d9ef;
+}
+
+.dark {
+  --bg: #121212;
+  --card: #1c1c1c;
+  --text: #f4f4f4;
+  --muted: rgba(244, 244, 244, 0.62);
+  --line: rgba(244, 244, 244, 0.16);
+  --accent: #b8ff4d;
+  --linkedin: #0794c4;
+}
+
+body { background: var(--bg); color: var(--text); }
+.page { min-height: 100vh; padding: 0 24px 120px; }
+.header { padding: 54px 0; text-align: center; }
+.header h1 { margin: 0; font-size: 28px; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+.grid { max-width: 1420px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.stack { display: grid; gap: 20px; }
+.col-2 { grid-column: span 2; }
+.col-5 { grid-column: span 5; }
+.two-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.card { background: var(--card); border-radius: 34px; overflow: hidden; }
+.pad { padding: 32px; }
+.label { display: inline-flex; width: fit-content; align-items: center; border-radius: 999px; background: var(--accent); color: #050505; padding: 9px 16px; font-size: 14px; font-weight: 900; line-height: 1; }
+.about { min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; }
+.about p { max-width: 700px; margin: 0; font-size: 25px; line-height: 1.55; letter-spacing: -0.03em; font-weight: 500; }
+.profile { min-height: 300px; display: grid; place-items: center; }
+.avatar-wrap { width: 164px; height: 164px; border-radius: 999px; background: #ff7b45; display: grid; place-items: center; }
+.avatar-wrap img { width: 144px; height: 144px; border-radius: 999px; object-fit: cover; border: 4px solid #fff; }
+.linkedin { min-height: 320px; background: var(--linkedin); display: grid; place-items: center; position: relative; transition: .25s ease; }
+.linkedin:hover, .social:hover, .case-card:hover, .resume:hover { transform: scale(.985); }
+.linkedin .in { font-size: 112px; font-weight: 900; color: #fff; line-height: 1; }
+.arrow { position: absolute; right: 28px; bottom: 28px; width: 50px; height: 50px; border-radius: 999px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.75); color: #fff; font-size: 28px; font-weight: 800; }
+.service { min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; }
+.service h2, .case-card h2 { margin: 0; font-size: 25px; line-height: 1.1; font-weight: 900; letter-spacing: -0.04em; }
+.service p { margin: 18px 0 0; font-size: 18px; line-height: 1.55; font-weight: 500; color: var(--muted); }
+.experience { min-height: 650px; }
+.jobs { margin-top: 70px; }
+.job { display: grid; grid-template-columns: 1fr auto; gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.job:last-child { border-bottom: 0; }
+.job h3 { margin: 0; font-size: 19px; font-weight: 900; color: var(--muted); }
+.job p { margin: 8px 0 0; font-size: 19px; font-weight: 500; }
+.job .year { align-self: center; margin: 0; color: var(--text); }
+.resume { margin-top: 54px; display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--text); border-radius: 999px; padding: 14px 24px; color: var(--text); background: transparent; font-weight: 900; transition: .25s ease; }
+.case-card { position: relative; min-height: 330px; display: flex; flex-direction: column; justify-content: space-between; transition: .25s ease; }
+.case-card.tall { min-height: 650px; }
+.case-card img { position: absolute; object-fit: cover; }
+.case-card.tall img { bottom: 130px; right: -90px; width: 118%; height: 310px; transform: rotate(-14deg); border-radius: 24px; }
+.case-card:not(.tall) img { bottom: -50px; right: 44px; width: 48%; height: 240px; border-radius: 28px; object-fit: cover; }
+.case-card h2 { position: relative; z-index: 2; margin-top: auto; }
+.template { min-height: 330px; position: relative; }
+.template-preview { position: absolute; left: 50%; bottom: 0; width: 72%; height: 130px; transform: translateX(-50%); border-radius: 16px 16px 0 0; background: linear-gradient(135deg, #fff, #111); border: 1px solid var(--line); }
+.social { min-height: 160px; display: flex; flex-direction: column; justify-content: space-between; transition: .25s ease; }
+.social .icon { font-size: 38px; line-height: 1; }
+.social .handle { font-size: 16px; font-weight: 900; }
+.theme-switch { position: fixed; left: 50%; bottom: 28px; z-index: 50; transform: translateX(-50%); display: flex; gap: 6px; padding: 7px; border-radius: 999px; background: rgba(218,229,235,.9); backdrop-filter: blur(16px); box-shadow: 0 12px 40px rgba(0,0,0,.22); }
+.theme-switch button { width: 46px; height: 38px; border-radius: 999px; display: grid; place-items: center; background: transparent; color: #101418; font-size: 20px; transition: .2s ease; }
+.theme-switch button.active { background: #fff; }
+.case-page { max-width: 1100px; margin: 0 auto; padding-top: 44px; }
+.back { display: inline-flex; margin-bottom: 36px; color: var(--muted); font-weight: 800; }
+.hero { padding: 48px; }
+.hero h1 { margin: 26px 0 20px; font-size: clamp(42px, 8vw, 92px); line-height: .95; letter-spacing: -0.07em; }
+.hero p { max-width: 760px; margin: 0; color: var(--muted); font-size: 22px; line-height: 1.55; }
+.meta { margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.meta div { border-top: 1px solid var(--line); padding-top: 18px; }
+.meta span { display: block; color: var(--muted); font-weight: 800; font-size: 13px; margin-bottom: 8px; }
+.mockup { height: 480px; margin-top: 20px; border-radius: 34px; background: linear-gradient(135deg, #0794c4, #b8ff4d); }
+
+@media (max-width: 900px) {
+  .page { padding: 0 14px 110px; }
+  .header h1 { font-size: 20px; }
+  .grid { display: flex; flex-direction: column; max-width: 430px; gap: 16px; }
+  .stack, .two-grid, .social-grid { display: grid; gap: 16px; }
+  .two-grid, .social-grid { grid-template-columns: repeat(2, 1fr); }
+  .card { border-radius: 24px; }
+  .pad { padding: 24px; }
+  .about { min-height: 310px; }
+  .about p { font-size: 20px; }
+  .profile, .linkedin { min-height: 180px; }
+  .linkedin .in { font-size: 76px; }
+  .service, .template, .case-card { min-height: 260px; }
+  .experience { min-height: auto; }
+  .jobs { margin-top: 48px; }
+  .job h3, .job p { font-size: 15px; }
+  .case-card.tall { min-height: 330px; }
+  .case-card.tall img, .case-card:not(.tall) img { bottom: 12px; right: -20px; width: 65%; height: 190px; transform: rotate(0); }
+  .social-grid .social:last-child { grid-column: span 1; }
+  .meta { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 28px; }
+  .mockup { height: 300px; }
+}
