@@ -76,11 +76,11 @@ img {
 }
 
 .home-grid {
-  width: min(100%, 1120px);
+  width: min(100%, 1284px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-auto-rows: 220px;
+  grid-template-columns: 230px 250px 260px 240px 240px;
+  grid-auto-rows: 250px;
   gap: 16px;
   grid-template-areas:
     "about about profile imoney imoney"
@@ -143,16 +143,17 @@ img {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 42px;
 }
 
 .about-card p {
   margin: 0;
-  max-width: 620px;
-  font-size: clamp(17px, 1.25vw, 20px);
-  line-height: 1.42;
-  letter-spacing: -0.04em;
-  font-weight: 700;
+  max-width: 470px;
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+  font-weight: 720;
 }
 
 .about-card p span {
@@ -167,7 +168,7 @@ img {
 }
 
 .profile-frame {
-  width: 108px;
+  width: 112px;
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -185,11 +186,15 @@ img {
   padding: 28px 26px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 76px;
 }
 
 .logo-mask {
   width: 100%;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
@@ -199,27 +204,28 @@ img {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 46px;
-  animation: logoMarquee 16s linear infinite;
+  gap: 54px;
+  animation: logoMarquee 18s linear infinite;
 }
 
 .logo-track img {
-  width: 390px;
-  height: auto;
+  width: auto;
+  height: 54px;
+  max-width: none;
   flex: 0 0 auto;
 }
 
 @keyframes logoMarquee {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 23px)); }
+  to { transform: translateX(calc(-50% - 27px)); }
 }
 
 .testimonial-card {
   grid-area: testimonials;
-  padding: 28px;
+  padding: 28px 26px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .testimonial-copy {
@@ -231,24 +237,30 @@ img {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.testimonial-copy {
+  margin-top: 56px;
+  padding-right: 16px;
+}
+
 .testimonial-copy p {
   margin: 0 0 22px;
-  max-width: 250px;
+  max-width: 176px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.42;
-  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.36;
+  font-weight: 620;
 }
 
 .testimonial-copy strong {
   display: block;
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .testimonial-copy span {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 12px;
+  line-height: 1.25;
 }
 
 .round-next {
@@ -266,13 +278,13 @@ img {
 
 .experience-card {
   grid-area: exp;
-  padding: 32px;
+  padding: 34px;
   display: flex;
   flex-direction: column;
 }
 
 .job-list {
-  margin-top: 38px;
+  margin-top: 48px;
 }
 
 .job-row {
@@ -401,7 +413,7 @@ img {
 .case-systems { grid-area: systems; }
 
 .case-imoney .case-visual {
-  width: 94%;
+  width: 88%;
   max-width: none;
   top: 58px;
   left: 50%;
@@ -416,15 +428,15 @@ img {
 
 .case-ramadan .case-visual {
   --rotate: -15deg;
-  width: 52%;
-  right: -24px;
-  top: 58px;
+  width: 48%;
+  right: -10px;
+  top: 56px;
 }
 
 .case-phillip .case-visual {
-  width: 45%;
-  right: -8px;
-  bottom: -82px;
+  width: 50%;
+  right: 10px;
+  bottom: -72px;
 }
 
 .case-shortcut .case-visual {
@@ -434,7 +446,7 @@ img {
 }
 
 .case-systems .case-visual {
-  width: 62%;
+  width: 70%;
   right: -18px;
   bottom: 6px;
 }
