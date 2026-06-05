@@ -193,33 +193,34 @@ img {
 }
 
 .logo-mask {
-  width: 100%;
-  min-height: 96px;
+  width: 82%;
+  min-height: 128px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 16%, black 84%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16%, black 84%, transparent);
 }
 
 .logo-track {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 52px;
-  animation: logoMarquee 20s linear infinite;
+  gap: 90px;
+  animation: logoMarquee 58s linear infinite;
 }
 
 .logo-track img {
   width: auto;
-  height: 86px;
+  height: 128px;
   max-width: none;
   flex: 0 0 auto;
 }
 
 @keyframes logoMarquee {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 27px)); }
+  to { transform: translateX(calc(-50% - 45px)); }
 }
 
 .testimonial-card {
@@ -674,8 +675,19 @@ img {
     gap: 32px;
   }
 
+  .logo-mask {
+    width: 86%;
+    min-height: 72px;
+  }
+
+  .logo-track {
+    gap: 48px;
+    animation-duration: 50s;
+  }
+
   .logo-track img {
-    width: 300px;
+    width: auto;
+    height: 72px;
   }
 
   .testimonial-card {
