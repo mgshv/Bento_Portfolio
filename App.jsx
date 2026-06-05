@@ -129,7 +129,7 @@ function AboutCard() {
     <section className="card about-card reveal" style={{ '--delay': '0ms' }}>
       <Label>About</Label>
       <p>
-        Art Director and Creative Lead based in Kuala Lumpur, driven by a relentless obsession with turning consumer psychology into performance <span>with over $1m in measurable revenue across virtually every industry.</span>
+        Art Director and Creative Lead based in Kuala Lumpur, driven by a relentless obsession with turning consumer psychology into performance. <span>2x ROAS on Meta, 14,000+ leads in under six months, and over $500K in measurable revenue across virtually every industry.</span>
       </p>
     </section>
   );

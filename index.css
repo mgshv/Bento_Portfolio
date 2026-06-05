@@ -76,11 +76,11 @@ img {
 }
 
 .home-grid {
-  width: min(100%, 1230px);
+  width: min(100%, 1120px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-auto-rows: 198px;
+  grid-auto-rows: 220px;
   gap: 16px;
   grid-template-areas:
     "about about profile imoney imoney"
@@ -140,7 +140,7 @@ img {
 
 .about-card {
   grid-area: about;
-  padding: 32px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -148,11 +148,11 @@ img {
 
 .about-card p {
   margin: 0;
-  max-width: 600px;
-  font-size: clamp(20px, 1.75vw, 25px);
-  line-height: 1.48;
-  letter-spacing: -0.045em;
-  font-weight: 500;
+  max-width: 620px;
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+  font-weight: 700;
 }
 
 .about-card p span {
@@ -167,7 +167,7 @@ img {
 }
 
 .profile-frame {
-  width: 122px;
+  width: 108px;
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -182,7 +182,7 @@ img {
 
 .clients-card {
   grid-area: clients;
-  padding: 28px;
+  padding: 28px 26px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -204,7 +204,7 @@ img {
 }
 
 .logo-track img {
-  width: 470px;
+  width: 390px;
   height: auto;
   flex: 0 0 auto;
 }
@@ -232,11 +232,11 @@ img {
 }
 
 .testimonial-copy p {
-  margin: 0 0 28px;
-  max-width: 260px;
+  margin: 0 0 22px;
+  max-width: 250px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.48;
+  font-size: 14px;
+  line-height: 1.42;
   font-weight: 600;
 }
 
@@ -272,14 +272,14 @@ img {
 }
 
 .job-list {
-  margin-top: 52px;
+  margin-top: 38px;
 }
 
 .job-row {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 18px;
-  padding: 18px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -353,16 +353,30 @@ img {
 .case-card h2,
 .other-cases-card h2 {
   position: relative;
-  z-index: 5;
+  z-index: 6;
   margin: auto 0 0;
   max-width: 300px;
   display: inline-flex;
   align-items: flex-end;
   gap: 4px;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.08;
   letter-spacing: -0.055em;
   font-weight: 900;
+}
+
+
+.case-card::after,
+.other-cases-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  height: 42%;
+  background: linear-gradient(to top, var(--card) 20%, color-mix(in srgb, var(--card) 68%, transparent), transparent);
+  pointer-events: none;
 }
 
 .case-card .case-visual {
@@ -387,7 +401,7 @@ img {
 .case-systems { grid-area: systems; }
 
 .case-imoney .case-visual {
-  width: 108%;
+  width: 94%;
   max-width: none;
   top: 58px;
   left: 50%;
@@ -401,16 +415,16 @@ img {
 }
 
 .case-ramadan .case-visual {
-  --rotate: -17deg;
-  width: 73%;
-  right: -38px;
-  top: 76px;
+  --rotate: -15deg;
+  width: 52%;
+  right: -24px;
+  top: 58px;
 }
 
 .case-phillip .case-visual {
-  width: 58%;
-  right: -16px;
-  bottom: -42px;
+  width: 45%;
+  right: -8px;
+  bottom: -82px;
 }
 
 .case-shortcut .case-visual {
@@ -420,9 +434,9 @@ img {
 }
 
 .case-systems .case-visual {
-  width: 74%;
-  right: -34px;
-  bottom: 0;
+  width: 62%;
+  right: -18px;
+  bottom: 6px;
 }
 
 .social-stack {
@@ -457,10 +471,10 @@ img {
 .other-cases-card img {
   position: absolute;
   z-index: 2;
-  width: 118%;
+  width: 98%;
   max-width: none;
-  top: -10px;
-  right: -74px;
+  top: 16px;
+  right: -42px;
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.12));
   animation: floatOther 6s ease-in-out infinite;
 }
@@ -614,13 +628,13 @@ img {
   }
 
   .about-card {
-    min-height: 188px;
+    min-height: 230px;
     padding: 22px;
   }
 
   .about-card p {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.45;
     letter-spacing: -0.04em;
   }
 
@@ -709,8 +723,8 @@ img {
   }
 
   .case-imoney .case-visual {
-    width: 116%;
-    top: 48px;
+    width: 104%;
+    top: 50px;
   }
 
   .case-ramadan {
@@ -718,10 +732,10 @@ img {
   }
 
   .case-ramadan .case-visual {
-    --rotate: -15deg;
-    width: 58%;
-    right: -10px;
-    top: 42px;
+    --rotate: -14deg;
+    width: 50%;
+    right: -6px;
+    top: 36px;
   }
 
   .case-phillip {
@@ -729,9 +743,9 @@ img {
   }
 
   .case-phillip .case-visual {
-    width: 98%;
-    right: -22px;
-    bottom: 20px;
+    width: 82%;
+    right: -18px;
+    bottom: -34px;
   }
 
   .case-shortcut {
@@ -750,9 +764,9 @@ img {
   }
 
   .case-systems .case-visual {
-    width: 100%;
-    right: -22px;
-    bottom: 42px;
+    width: 82%;
+    right: -18px;
+    bottom: 34px;
   }
 
   .social-stack {
@@ -780,9 +794,9 @@ img {
   }
 
   .other-cases-card img {
-    width: 111%;
-    right: -36px;
-    top: 0;
+    width: 96%;
+    right: -26px;
+    top: 18px;
   }
 
   .theme-switch {
