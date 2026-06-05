@@ -605,28 +605,28 @@ img {
 
 @media (max-width: 760px) {
   .app-shell {
-    padding: 0 14px 96px;
+    padding: 0 14px 112px;
   }
 
   .site-header {
-    padding: 30px 0 24px;
+    padding: 34px 0 26px;
   }
 
   .brand-name {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .home-grid {
-    width: min(100%, 390px);
+    width: min(100%, 430px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
-    gap: 10px;
+    gap: 12px;
     grid-template-areas:
       "about about"
       "profile clients"
       "testimonials testimonials"
-      "imoney imoney"
       "exp exp"
+      "imoney imoney"
       "ramadan ramadan"
       "phillip phillip"
       "shortcut shortcut"
@@ -636,13 +636,14 @@ img {
   }
 
   .card {
-    border-radius: 18px;
+    border-radius: 22px;
   }
 
   .label {
-    min-height: 20px;
-    padding: 0 10px;
-    font-size: 9px;
+    min-height: 30px;
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: 900;
   }
 
   .reveal {
@@ -651,196 +652,228 @@ img {
   }
 
   .about-card {
-    min-height: 230px;
-    padding: 22px;
+    min-height: 330px;
+    padding: 24px;
   }
 
   .about-card p {
-    font-size: 14px;
-    line-height: 1.45;
-    letter-spacing: -0.04em;
+    max-width: 100%;
+    font-size: 19px;
+    line-height: 1.36;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+  }
+
+  .about-card p span {
+    font-weight: 700;
   }
 
   .profile-card,
   .clients-card {
-    min-height: 126px;
-    padding: 18px;
+    min-height: 245px;
+    padding: 22px;
   }
 
   .profile-frame {
-    width: 72px;
+    width: 122px;
   }
 
   .clients-card {
     justify-content: flex-start;
-    gap: 32px;
+    gap: 44px;
   }
 
   .logo-mask {
-    width: 86%;
-    min-height: 72px;
+    width: 100%;
+    min-height: 116px;
   }
 
   .logo-track {
-    gap: 48px;
-    animation-duration: 50s;
+    gap: 70px;
+    animation-duration: 70s;
   }
 
   .logo-track img {
     width: auto;
-    height: 72px;
+    height: 124px;
   }
 
   .testimonial-card {
-    min-height: 208px;
-    padding: 22px;
+    min-height: 340px;
+    padding: 24px;
+  }
+
+  .testimonial-copy {
+    padding-right: 54px;
   }
 
   .testimonial-copy p {
-    margin-top: 26px;
-    margin-bottom: 22px;
-    font-size: 12px;
+    max-width: 310px;
+    margin-top: 58px;
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 1.34;
+    letter-spacing: -0.035em;
+    font-weight: 700;
   }
 
-  .testimonial-copy strong,
+  .testimonial-copy strong {
+    font-size: 15px;
+  }
+
   .testimonial-copy span {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   .round-next {
-    right: 16px;
-    bottom: 16px;
+    right: 18px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .round-next svg {
+    width: 22px;
+    height: 22px;
   }
 
   .experience-card {
-    min-height: 380px;
-    padding: 22px;
+    min-height: 440px;
+    padding: 24px;
   }
 
   .job-list {
-    margin-top: 36px;
+    margin-top: 52px;
   }
 
   .job-row {
-    padding: 13px 0;
+    padding: 18px 0;
+    gap: 14px;
   }
 
   .job-row h3 {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .job-row p,
   .job-row span {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .pill-button {
-    min-height: 34px;
-    padding: 0 16px;
-    font-size: 10px;
+    min-height: 40px;
+    padding: 0 18px;
+    font-size: 12px;
   }
 
   .case-card {
-    min-height: 238px;
-    padding: 18px;
+    min-height: 250px;
+    padding: 20px;
   }
 
   .case-card h2,
   .other-cases-card h2 {
-    max-width: 235px;
-    font-size: 15px;
-    line-height: 1.08;
+    max-width: 315px;
+    font-size: 22px;
+    line-height: 1.02;
+    letter-spacing: -0.05em;
   }
 
   .case-imoney {
-    min-height: 322px;
+    min-height: 365px;
   }
 
   .case-imoney .case-visual {
-    width: 104%;
-    top: 50px;
+    width: 112%;
+    top: 62px;
   }
 
   .case-ramadan {
-    min-height: 300px;
+    min-height: 430px;
   }
 
   .case-ramadan .case-visual {
     --rotate: -14deg;
-    width: 50%;
-    right: -6px;
-    top: 36px;
+    width: 70%;
+    right: -36px;
+    top: 58px;
   }
 
   .case-phillip {
-    min-height: 248px;
+    min-height: 300px;
   }
 
   .case-phillip .case-visual {
-    width: 82%;
-    right: -18px;
-    bottom: -34px;
+    width: 88%;
+    right: -20px;
+    bottom: -38px;
   }
 
   .case-shortcut {
     display: flex;
-    min-height: 220px;
+    min-height: 300px;
   }
 
   .case-shortcut .case-visual {
-    width: 96%;
-    right: -18px;
-    top: 44px;
+    width: 106%;
+    right: -22px;
+    top: 58px;
   }
 
   .case-systems {
-    min-height: 248px;
+    min-height: 330px;
   }
 
   .case-systems .case-visual {
-    width: 82%;
-    right: -18px;
-    bottom: 34px;
+    width: 98%;
+    right: -54px;
+    top: 22px;
+    bottom: auto;
   }
 
   .social-stack {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
 
   .social-card {
-    min-height: 74px;
-    padding: 12px;
+    min-height: 92px;
+    padding: 14px;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: 8px;
   }
 
+  .social-card svg {
+    width: 30px;
+    height: 30px;
+  }
+
   .social-card strong {
     margin-left: 0;
-    font-size: 9px;
+    font-size: 13px;
   }
 
   .other-cases-card {
-    min-height: 230px;
-    padding: 18px;
+    min-height: 320px;
+    padding: 20px;
   }
 
   .other-cases-card img {
-    width: 96%;
-    right: -26px;
-    top: 18px;
+    width: 106%;
+    right: -28px;
+    top: 22px;
   }
 
   .theme-switch {
     bottom: 18px;
-    padding: 6px;
+    padding: 7px;
   }
 
   .theme-switch button {
-    width: 38px;
-    height: 32px;
+    width: 48px;
+    height: 40px;
   }
 
   .case-page {
