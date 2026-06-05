@@ -76,25 +76,25 @@ img {
 }
 
 .home-grid {
-  width: min(100%, 1284px);
+  width: min(100%, 1128px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 230px 250px 260px 240px 240px;
-  grid-auto-rows: 250px;
+  grid-template-columns: 300px 250px 250px 280px;
+  grid-template-rows: 260px 240px 315px 265px 265px;
   gap: 16px;
   grid-template-areas:
-    "about about profile imoney imoney"
-    "clients exp exp imoney imoney"
-    "testimonials exp exp ramadan ramadan"
-    "phillip phillip phillip ramadan ramadan"
-    "social other other systems systems";
+    "about about profile imoney"
+    "clients exp exp imoney"
+    "testimonials exp exp ramadan"
+    "phillip phillip shortcut ramadan"
+    "social other systems systems";
 }
 
 .card {
   position: relative;
   overflow: hidden;
   background: var(--card);
-  border-radius: 26px;
+  border-radius: 28px;
   box-shadow: var(--shadow);
   transition: background 0.28s ease, box-shadow 0.28s ease, transform 0.28s ease;
 }
@@ -144,20 +144,21 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 42px;
+  gap: 58px;
 }
 
 .about-card p {
   margin: 0;
-  max-width: 470px;
-  font-size: 17px;
-  line-height: 1.35;
-  letter-spacing: -0.035em;
-  font-weight: 720;
+  max-width: 500px;
+  font-size: 18.5px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  font-weight: 520;
 }
 
 .about-card p span {
   color: var(--muted);
+  font-weight: 520;
 }
 
 .profile-card {
@@ -168,7 +169,7 @@ img {
 }
 
 .profile-frame {
-  width: 112px;
+  width: 118px;
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -187,30 +188,30 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 76px;
+  gap: 72px;
 }
 
 .logo-mask {
   width: 100%;
-  min-height: 62px;
+  min-height: 96px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 14%, black 86%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 .logo-track {
   display: flex;
   width: max-content;
   align-items: center;
-  gap: 54px;
-  animation: logoMarquee 18s linear infinite;
+  gap: 52px;
+  animation: logoMarquee 20s linear infinite;
 }
 
 .logo-track img {
   width: auto;
-  height: 54px;
+  height: 86px;
   max-width: none;
   flex: 0 0 auto;
 }
@@ -238,28 +239,28 @@ img {
 }
 
 .testimonial-copy {
-  margin-top: 56px;
-  padding-right: 16px;
+  margin-top: 54px;
+  padding-right: 18px;
 }
 
 .testimonial-copy p {
-  margin: 0 0 22px;
-  max-width: 176px;
+  margin: 0 0 36px;
+  max-width: 230px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.36;
-  font-weight: 620;
+  font-size: 14.5px;
+  line-height: 1.43;
+  font-weight: 560;
 }
 
 .testimonial-copy strong {
   display: block;
-  margin-bottom: 4px;
-  font-size: 13px;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
 .testimonial-copy span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.25;
 }
 
@@ -278,20 +279,20 @@ img {
 
 .experience-card {
   grid-area: exp;
-  padding: 34px;
+  padding: 34px 38px;
   display: flex;
   flex-direction: column;
 }
 
 .job-list {
-  margin-top: 48px;
+  margin-top: 58px;
 }
 
 .job-row {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 18px;
-  padding: 15px 0;
+  padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -372,7 +373,7 @@ img {
   align-items: flex-end;
   gap: 4px;
   font-size: 20px;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.055em;
   font-weight: 900;
 }
@@ -409,13 +410,13 @@ img {
 .case-imoney { grid-area: imoney; }
 .case-ramadan { grid-area: ramadan; }
 .case-phillip { grid-area: phillip; }
-.case-shortcut { grid-area: shortcut; display: none; }
+.case-shortcut { grid-area: shortcut; }
 .case-systems { grid-area: systems; }
 
 .case-imoney .case-visual {
   width: 88%;
   max-width: none;
-  top: 58px;
+  top: 62px;
   left: 50%;
   transform: translateX(-50%);
   animation-name: floatImoney;
@@ -428,27 +429,31 @@ img {
 
 .case-ramadan .case-visual {
   --rotate: -15deg;
-  width: 48%;
-  right: -10px;
-  top: 56px;
+  width: 72%;
+  max-width: none;
+  right: -60px;
+  top: 54px;
 }
 
 .case-phillip .case-visual {
-  width: 50%;
-  right: 10px;
-  bottom: -72px;
+  width: 64%;
+  max-width: none;
+  right: -10px;
+  bottom: -62px;
 }
 
 .case-shortcut .case-visual {
-  width: 95%;
-  right: -48px;
+  width: 118%;
+  max-width: none;
+  right: -54px;
   top: 42px;
 }
 
 .case-systems .case-visual {
-  width: 70%;
-  right: -18px;
-  bottom: 6px;
+  width: 58%;
+  max-width: none;
+  right: -2px;
+  top: 0;
 }
 
 .social-stack {
@@ -483,10 +488,10 @@ img {
 .other-cases-card img {
   position: absolute;
   z-index: 2;
-  width: 98%;
+  width: 108%;
   max-width: none;
-  top: 16px;
-  right: -42px;
+  top: 18px;
+  right: -54px;
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.12));
   animation: floatOther 6s ease-in-out infinite;
 }
@@ -588,8 +593,6 @@ img {
       "phillip phillip ramadan ramadan"
       "social other systems systems";
   }
-
-  .case-shortcut { display: none; }
 }
 
 @media (max-width: 760px) {
