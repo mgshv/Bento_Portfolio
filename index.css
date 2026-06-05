@@ -118,6 +118,7 @@ img {
   font-size: 13px;
   line-height: 1;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .reveal {
@@ -143,15 +144,15 @@ img {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 58px;
+  justify-content: space-between;
+  gap: 0;
 }
 
 .about-card p {
   margin: 0;
   max-width: 500px;
-  font-size: 18.5px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.46;
   letter-spacing: -0.025em;
   font-weight: 520;
 }
@@ -184,11 +185,11 @@ img {
 
 .clients-card {
   grid-area: clients;
-  padding: 28px 26px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 72px;
+  justify-content: space-between;
+  gap: 0;
 }
 
 .logo-mask {
@@ -223,10 +224,10 @@ img {
 
 .testimonial-card {
   grid-area: testimonials;
-  padding: 28px 26px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .testimonial-copy {
@@ -239,16 +240,16 @@ img {
 }
 
 .testimonial-copy {
-  margin-top: 54px;
-  padding-right: 18px;
+  margin-top: 0;
+  padding-right: 22px;
 }
 
 .testimonial-copy p {
-  margin: 0 0 36px;
+  margin: 0 0 34px;
   max-width: 230px;
   color: var(--muted);
   font-size: 14.5px;
-  line-height: 1.43;
+  line-height: 1.48;
   font-weight: 560;
 }
 
@@ -279,13 +280,13 @@ img {
 
 .experience-card {
   grid-area: exp;
-  padding: 34px 38px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
 }
 
 .job-list {
-  margin-top: 58px;
+  margin-top: 60px;
 }
 
 .job-row {
@@ -345,7 +346,7 @@ img {
 }
 
 .case-card {
-  padding: 28px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -369,15 +370,20 @@ img {
   z-index: 6;
   margin: auto 0 0;
   max-width: 300px;
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 4px;
+  display: block;
+  padding-right: 28px;
   font-size: 20px;
   line-height: 1.05;
   letter-spacing: -0.055em;
   font-weight: 900;
 }
 
+.case-card h2 svg,
+.other-cases-card h2 svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 
 .case-card::after,
 .other-cases-card::after {
@@ -414,9 +420,9 @@ img {
 .case-systems { grid-area: systems; }
 
 .case-imoney .case-visual {
-  width: 88%;
+  width: 145%;
   max-width: none;
-  top: 62px;
+  top: 58px;
   left: 50%;
   transform: translateX(-50%);
   animation-name: floatImoney;
@@ -479,7 +485,7 @@ img {
 
 .other-cases-card {
   grid-area: other;
-  padding: 24px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
