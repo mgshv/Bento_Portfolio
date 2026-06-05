@@ -10,7 +10,8 @@ function IconSun({ size = 18 }) { return <svg width={size} height={size} viewBox
 function IconMoon({ size = 17 }) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>; }
 
 import profileImage from './profile.png';
-import logoStrip from './logo-strip.png';
+import logoStripLight from './logo-strip-light.png';
+import logoStripDark from './logo-strip-dark.png';
 import imoneyImage from './imoney.png';
 import ramadanImage from './unicef-ramadan.png';
 import phillipImage from './phillip-nova.png';
@@ -145,7 +146,8 @@ function ProfileCard() {
   );
 }
 
-function ClientsCard() {
+function ClientsCard({ theme }) {
+  const logoStrip = theme === 'dark' ? logoStripDark : logoStripLight;
   return (
     <section className="card clients-card reveal" style={{ '--delay': '100ms' }}>
       <Label>Clients</Label>
@@ -252,7 +254,7 @@ function SocialStack() {
   );
 }
 
-function Home() {
+function Home({ theme }) {
   useEffect(() => {
     const items = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(
@@ -277,7 +279,7 @@ function Home() {
       <main className="home-grid">
         <AboutCard />
         <ProfileCard />
-        <ClientsCard />
+        <ClientsCard theme={theme} />
         <TestimonialCard />
         <ExperienceCard />
         <CaseCard id="imoney" delay="160ms" />
@@ -329,7 +331,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      {route.startsWith('/case-study/') ? <CaseStudyPage slug={slug} /> : <Home />}
+      {route.startsWith('/case-study/') ? <CaseStudyPage slug={slug} /> : <Home theme={theme} />}
       <ThemeSwitch theme={theme} setTheme={setTheme} />
     </div>
   );
