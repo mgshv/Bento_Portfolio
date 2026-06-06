@@ -620,6 +620,7 @@ img {
   .home-grid {
     width: min(100%, 430px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
     grid-auto-rows: auto;
     gap: 14px;
     align-items: stretch;
@@ -654,7 +655,7 @@ img {
   }
 
   .about-card {
-    min-height: 390px;
+    min-height: 430px;
     padding: 24px;
     overflow: hidden;
   }
@@ -904,7 +905,7 @@ img {
 
 @media (max-width: 390px) {
   .about-card {
-    min-height: 410px;
+    min-height: 450px;
   }
 
   .about-card p {
