@@ -925,3 +925,401 @@ img {
     height: 132px;
   }
 }
+
+/* iMoney Case Study Page */
+.imoney-case-page {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 64px 0 150px;
+}
+
+.floating-close {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 90;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--glass);
+  color: var(--text);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.13);
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.imoney-case-intro {
+  min-height: 112px;
+  padding: 26px 34px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.case-section-card {
+  overflow: hidden;
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.imoney-case-intro h1 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.imoney-case-intro p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+
+.case-meta-card {
+  min-height: 128px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.case-meta-card strong {
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.case-image-block {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  background: var(--card);
+}
+
+.case-image-block img {
+  width: 100%;
+  height: auto;
+}
+
+.case-copy-block {
+  max-width: 900px;
+  margin: 56px auto 0;
+}
+
+.case-copy-block h2,
+.case-copy-block h3,
+.case-copy-block p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.case-copy-block h2 {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.case-copy-block h2:not(:first-child) {
+  margin-top: 54px;
+}
+
+.case-copy-block h3 {
+  margin-top: 38px;
+  margin-bottom: 26px;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.case-copy-block p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--text);
+  font-size: 16.5px;
+  line-height: 1.72;
+  font-weight: 520;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 46px 0 60px;
+}
+
+.result-metric-card {
+  min-height: 188px;
+  padding: 18px;
+  overflow: hidden;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.result-metric-card img {
+  width: 100%;
+  height: calc(100% - 34px);
+  margin-top: 12px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+:root.dark .result-metric-card img {
+  filter: invert(1) hue-rotate(180deg) contrast(0.94);
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin: 42px 0 78px;
+}
+
+.scenario-card {
+  min-height: 188px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.scenario-card .label {
+  min-height: 36px;
+  padding: 0 18px;
+  font-size: 13px;
+}
+
+.scenario-card strong {
+  font-size: 24px;
+  line-height: 1.34;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.retargeting-grid {
+  width: min(100%, 720px);
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.retargeting-card {
+  min-height: 210px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.retargeting-card span {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #061006;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.retargeting-card strong {
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .imoney-case-page {
+    width: min(100%, 430px);
+    padding: 26px 0 125px;
+  }
+
+  .floating-close {
+    top: auto;
+    bottom: 92px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .imoney-case-intro {
+    min-height: 100px;
+    padding: 20px 20px;
+    border-radius: 18px;
+  }
+
+  .imoney-case-intro h1 {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  .imoney-case-intro p {
+    max-width: 270px;
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .case-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0 14px;
+  }
+
+  .case-meta-card {
+    min-height: 86px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .case-meta-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .case-meta-card .label {
+    min-height: 20px;
+    padding: 0 9px;
+    font-size: 8px;
+  }
+
+  .case-meta-card strong {
+    font-size: 9px;
+  }
+
+  .case-image-block {
+    border-radius: 14px;
+  }
+
+  .case-copy-block {
+    max-width: none;
+    margin: 32px 14px 0;
+  }
+
+  .case-copy-block h2 {
+    margin-bottom: 22px;
+    font-size: 13px;
+  }
+
+  .case-copy-block h2:not(:first-child) {
+    margin-top: 38px;
+  }
+
+  .case-copy-block h3 {
+    margin-top: 28px;
+    margin-bottom: 18px;
+    font-size: 10.5px;
+  }
+
+  .case-copy-block p {
+    margin-bottom: 18px;
+    font-size: 10px;
+    line-height: 1.72;
+    font-weight: 560;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 28px 0 38px;
+  }
+
+  .result-metric-card {
+    min-height: 158px;
+    padding: 14px;
+    border-radius: 13px;
+  }
+
+  .result-metric-card .label {
+    min-height: 20px;
+    padding: 0 9px;
+    font-size: 8px;
+  }
+
+  .result-metric-card img {
+    height: 116px;
+    margin-top: 6px;
+  }
+
+  .scenario-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 28px 0 34px;
+  }
+
+  .scenario-card {
+    min-height: 104px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .scenario-card .label {
+    min-height: 20px;
+    padding: 0 8px;
+    font-size: 7.5px;
+    max-width: 100%;
+  }
+
+  .scenario-card strong {
+    font-size: 10px;
+    line-height: 1.25;
+  }
+
+  .retargeting-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 34px auto 0;
+  }
+
+  .retargeting-card {
+    min-height: 104px;
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .retargeting-card span {
+    width: 28px;
+    height: 28px;
+    font-size: 8px;
+  }
+
+  .retargeting-card strong {
+    font-size: 10.5px;
+    line-height: 1.34;
+  }
+}

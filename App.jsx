@@ -13,6 +13,14 @@ import profileImage from './profile.png';
 import logoStripLight from './logo-strip-light.png';
 import logoStripDark from './logo-strip-dark.png';
 import imoneyImage from './imoney.png';
+import imoneyCaseHero from './imoney-case-hero.png';
+import imoneyCaseStrategy from './imoney-case-strategy.png';
+import imoneyResultMargin from './imoney-result-margin.png';
+import imoneyResultApproval from './imoney-result-approval.png';
+import imoneyResultRevenue from './imoney-result-revenue.png';
+import imoneyResultDisbursement from './imoney-result-disbursement.png';
+import imoneyResultImpressions from './imoney-result-impressions.png';
+import imoneyResultCpm from './imoney-result-cpm.png';
 import ramadanImage from './unicef-ramadan.png';
 import phillipImage from './phillip-nova.png';
 import shortcutImage from './sales-shortcut.png';
@@ -294,7 +302,139 @@ function Home({ theme }) {
   );
 }
 
+
+const imoneyResults = [
+  { label: 'Margin', image: imoneyResultMargin, alt: 'Margin improvement from loss to profit' },
+  { label: 'Approval Rate', image: imoneyResultApproval, alt: 'Approval rate improved from Q2 to Q4' },
+  { label: 'Revenue per Approval', image: imoneyResultRevenue, alt: 'Revenue per approval increased' },
+  { label: 'Disbursement Amount', image: imoneyResultDisbursement, alt: 'Total loans disbursed grew across campaign' },
+  { label: 'Impressions', image: imoneyResultImpressions, alt: '2.65 million monthly impressions' },
+  { label: 'CPM Efficiency', image: imoneyResultCpm, alt: 'RM79.67 cost per thousand impressions' },
+];
+
+const imoneyScenarios = [
+  ['🏥 Emergency expenses', 'Urgency, fear of being unprepared'],
+  ['🏠 Home renovations', 'Aspiration, family, future'],
+  ['💼 Small Business', 'Ambition, growth, opportunity'],
+  ['💳 Debt consolidation', 'Shame relief, control, fresh start'],
+  ['📦 Generic needs', 'Broad intent capture'],
+];
+
+const imoneyRetargeting = [
+  ['01', 'Refined messaging with scenario callbacks'],
+  ['02', 'Strong, clear CTAs to drive conversions'],
+  ['03', 'Shorter, more direct animations to re-engage viewers efficiently'],
+];
+
+function CaseMetaCard({ label, value }) {
+  return (
+    <div className="case-meta-card">
+      <Label>{label}</Label>
+      <strong>{value}</strong>
+    </div>
+  );
+}
+
+function ResultMetricCard({ label, image, alt }) {
+  return (
+    <div className="result-metric-card">
+      <Label>{label}</Label>
+      <img src={image} alt={alt} />
+    </div>
+  );
+}
+
+function ScenarioCard({ title, copy }) {
+  return (
+    <div className="scenario-card">
+      <Label>{title}</Label>
+      <strong>{copy}</strong>
+    </div>
+  );
+}
+
+function RetargetingCard({ number, copy }) {
+  return (
+    <div className="retargeting-card">
+      <span>{number}</span>
+      <strong>{copy}</strong>
+    </div>
+  );
+}
+
+function ImoneyCaseStudyPage() {
+  return (
+    <main className="imoney-case-page">
+      <a className="floating-close" href="#/" aria-label="Close case study">×</a>
+
+      <section className="imoney-case-intro case-section-card reveal is-visible">
+        <h1>Full-Funnel Creative Strategy</h1>
+        <p>iMoney had the platform. They had the traffic. What they didn't have was a reason to show different people different messages.</p>
+      </section>
+
+      <section className="case-meta-grid reveal is-visible">
+        <CaseMetaCard label="Role" value="Creative Direction" />
+        <CaseMetaCard label="Client" value="iMoney" />
+        <CaseMetaCard label="Year" value="2025" />
+      </section>
+
+      <section className="case-image-block reveal is-visible">
+        <img src={imoneyCaseHero} alt="iMoney full funnel creative strategy hero" />
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Challenge</h2>
+        <p>Malaysia's largest personal finance comparison platform serving 29M+ users and also it was running ads that looked like everyone else in the fintech space. Generic visuals, one-size-fits-all messaging, and campaigns that were generating clicks but losing money. When they came to us, their margin was -9.88%. The creative wasn't doing the strategic work it needed to do.</p>
+
+        <h2>Results</h2>
+        <p>Over three consecutive quarters, the campaign went from unprofitable to one of iMoney's strongest performing channels:</p>
+      </section>
+
+      <section className="results-grid reveal is-visible">
+        {imoneyResults.map((item) => <ResultMetricCard key={item.label} {...item} />)}
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <p>A campaign that was losing money in Q2 delivered 30.75% margin and RM13.8M in loan disbursements by Q4 driven entirely by creative strategy restructure, not budget increase.</p>
+
+        <h2>Insight</h2>
+        <p>People don't borrow money for the same reason. A mother facing a medical emergency thinks completely differently from someone drowning in credit card debt or a couple saving for a wedding. Yet iMoney's ads were speaking to all of them with the same message.</p>
+        <p>The real problem wasn't the platform. It was that the creative had no strategic architecture, no segmentation, no funnel thinking, no connection between why someone needed money and what they were shown first.</p>
+      </section>
+
+      <section className="case-image-block reveal is-visible">
+        <img src={imoneyCaseStrategy} alt="iMoney strategy creative system" />
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>The Strategy</h2>
+        <h3>Top of Funnel — Scenario-Based Segmentation</h3>
+        <p>We rebuilt the campaign from the brief up, structuring it across two funnel stages.</p>
+        <p>Instead of one campaign, we developed five distinct audience scenarios based on the real emotional triggers behind personal loan decisions:</p>
+      </section>
+
+      <section className="scenario-grid reveal is-visible">
+        {imoneyScenarios.map(([title, copy]) => <ScenarioCard key={title} title={title} copy={copy} />)}
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <p>Each scenario had its own messaging angle, visual language, and animated creative male, female, and mobile UI variants producing 15 creatives to test across copy and persona simultaneously.</p>
+        <h3>Bottom of Funnel — Retargeting by Objection</h3>
+        <p>For users who had already engaged but hadn't converted, I identified three conversion blockers and built retargeting creatives to address each directly: urgency and time pressure, ease of platform use, and step-by-step process clarity.</p>
+      </section>
+
+      <section className="retargeting-grid reveal is-visible">
+        {imoneyRetargeting.map(([number, copy]) => <RetargetingCard key={number} number={number} copy={copy} />)}
+      </section>
+    </main>
+  );
+}
+
 function CaseStudyPage({ slug }) {
+  if (slug === 'imoney') {
+    return <ImoneyCaseStudyPage />;
+  }
+
   const item = caseStudies[slug];
 
   if (!item) {
