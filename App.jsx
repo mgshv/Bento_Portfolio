@@ -17,8 +17,6 @@ import imoneyCaseHero from './imoney-case-hero.png';
 import imoneyCaseStrategy from './imoney-case-strategy.png';
 import imoneyResultMargin from './imoney-result-margin.png';
 import imoneyResultApproval from './imoney-result-approval.png';
-import imoneyResultRevenue from './imoney-result-revenue.png';
-import imoneyResultDisbursement from './imoney-result-disbursement.png';
 import imoneyResultImpressions from './imoney-result-impressions.png';
 import imoneyResultCpm from './imoney-result-cpm.png';
 import ramadanImage from './unicef-ramadan.png';
@@ -306,8 +304,6 @@ function Home({ theme }) {
 const imoneyResults = [
   { label: 'Margin', image: imoneyResultMargin, alt: 'Margin improvement from loss to profit' },
   { label: 'Approval Rate', image: imoneyResultApproval, alt: 'Approval rate improved from Q2 to Q4' },
-  { label: 'Revenue per Approval', image: imoneyResultRevenue, alt: 'Revenue per approval increased' },
-  { label: 'Disbursement Amount', image: imoneyResultDisbursement, alt: 'Total loans disbursed grew across campaign' },
   { label: 'Impressions', image: imoneyResultImpressions, alt: '2.65 million monthly impressions' },
   { label: 'CPM Efficiency', image: imoneyResultCpm, alt: 'RM79.67 cost per thousand impressions' },
 ];

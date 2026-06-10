@@ -936,9 +936,10 @@ img {
 .floating-close {
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: auto;
+  bottom: 88px;
   z-index: 90;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 34px;
   height: 34px;
   display: grid;
@@ -1069,7 +1070,7 @@ img {
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   margin: 46px 0 60px;
 }
@@ -1114,29 +1115,29 @@ img {
 }
 
 .scenario-card .label {
-  min-height: 36px;
-  padding: 0 18px;
-  font-size: 13px;
+  min-height: 34px;
+  padding: 0 16px;
+  font-size: 12px;
 }
 
 .scenario-card strong {
-  font-size: 24px;
-  line-height: 1.34;
-  letter-spacing: -0.045em;
+  font-size: 20px;
+  line-height: 1.32;
+  letter-spacing: -0.04em;
   font-weight: 700;
 }
 
 .retargeting-grid {
-  width: min(100%, 720px);
+  width: 100%;
   margin: 80px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 18px;
 }
 
 .retargeting-card {
-  min-height: 210px;
-  padding: 30px;
+  min-height: 230px;
+  padding: 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1172,7 +1173,7 @@ img {
 
   .floating-close {
     top: auto;
-    bottom: 92px;
+    bottom: 82px;
     width: 30px;
     height: 30px;
     font-size: 18px;
