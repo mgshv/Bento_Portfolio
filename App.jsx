@@ -361,7 +361,7 @@ function RetargetingCard({ number, copy }) {
 function ImoneyCaseStudyPage() {
   return (
     <main className="imoney-case-page">
-      <a className="floating-close" href="#/" aria-label="Close case study">×</a>
+      <a className="case-back-pill reveal is-visible" href="#/" aria-label="Go back home">← Back home</a>
 
       <section className="imoney-case-intro case-section-card reveal is-visible">
         <h1>Full-Funnel Creative Strategy</h1>

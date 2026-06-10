@@ -933,27 +933,28 @@ img {
   padding: 64px 0 150px;
 }
 
-.floating-close {
-  position: fixed;
-  left: calc(50% + 72px);
-  top: auto !important;
-  bottom: 34px !important;
-  z-index: 95;
-  transform: translateX(-50%);
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
+.case-back-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  margin: 0 0 18px;
+  border-radius: 999px;
   background: var(--glass);
   color: var(--text);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(18px) saturate(150%);
   -webkit-backdrop-filter: blur(18px) saturate(150%);
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.13);
-  font-size: 20px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.09);
+  font-size: 14px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.case-back-pill:hover {
+  transform: translateY(-1px);
 }
 
 .imoney-case-intro {
@@ -1172,13 +1173,11 @@ img {
     padding: 24px 0 128px;
   }
 
-  .floating-close {
-    left: calc(50% + 74px);
-    top: auto !important;
-    bottom: 24px !important;
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
+  .case-back-pill {
+    min-height: 36px;
+    padding: 0 14px;
+    margin-bottom: 10px;
+    font-size: 11px;
   }
 
   .imoney-case-intro {
