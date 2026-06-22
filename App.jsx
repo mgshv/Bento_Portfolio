@@ -24,6 +24,11 @@ import phillipImage from './phillip-nova.png';
 import shortcutImage from './sales-shortcut.png';
 import systemsImage from './unicef-systems.png';
 import otherCasesImage from './other-cases.png';
+import unicefRayaStoryboard from './unicef-raya-storyboard.png';
+import unicefResultCpa from './unicef-result-cpa.png';
+import unicefResult2x from './unicef-result-2x.png';
+import unicefResultEfficiency from './unicef-result-efficiency.png';
+import unicefRayaVideo from './unicef-raya-video.mp4';
 
 const links = {
   email: 'mailto:muhammetgeldig@gmail.com',
@@ -322,6 +327,12 @@ const imoneyRetargeting = [
   ['03', 'Shorter, more direct animations to re-engage viewers efficiently'],
 ];
 
+const unicefRamadanResults = [
+  { label: 'Cost per Acquisition', image: unicefResultCpa, alt: 'Cost per acquisition reduced by 57 percent from 194 dollars to 112 dollars' },
+  { label: 'Donations Acquired', image: unicefResult2x, alt: 'Donations acquired doubled versus the prior year campaign' },
+  { label: 'Donations Acquired', image: unicefResultEfficiency, alt: 'Efficiency ratio increased by 14 percent with disproportionate return' },
+];
+
 function CaseMetaCard({ label, value }) {
   return (
     <div className="case-meta-card">
@@ -426,9 +437,62 @@ function ImoneyCaseStudyPage() {
   );
 }
 
+function UnicefRamadanCaseStudyPage() {
+  return (
+    <main className="imoney-case-page">
+      <a className="case-back-pill reveal is-visible" href="#/" aria-label="Go back home">← Back home</a>
+
+      <section className="imoney-case-intro case-section-card reveal is-visible">
+        <h1>59% Cheaper Ramadan Donations For UNICEF</h1>
+        <p>We halved acquisition cost and doubled donations by making Raya the moment of reckoning.</p>
+      </section>
+
+      <section className="case-meta-grid reveal is-visible">
+        <CaseMetaCard label="Role" value="Creative Direction" />
+        <CaseMetaCard label="Client" value="UNICEF" />
+        <CaseMetaCard label="Year" value="2024" />
+      </section>
+
+      <section className="case-image-block reveal is-visible">
+        <img src={unicefRayaStoryboard} alt="UNICEF Raya storyboard showing the campaign sequence and messaging" />
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Challenge</h2>
+        <p>Every year, Malaysians celebrate Raya with abundance. Full tables, open houses and family reunions. And every year, UNICEF runs a Ramadan donation campaign that struggles to cut through the noise of a season built on celebration.</p>
+        <p>The problem wasn't apathy. It was distance. The suffering was real, but it felt like someone else's story, happening somewhere else. UNICEF needed to close that gap — not by making Malaysians feel guilty about their table, but by making them feel something about the empty one.</p>
+
+        <h2>Results</h2>
+        <p>The brief assumed we needed to make people feel worse to make them give more. The opposite turned out to be true. By anchoring the campaign to a shared cultural experience — the iftar table — we gave Malaysians a moment of recognition before asking them to act. Guilt closes wallets. Empathy opens them.</p>
+      </section>
+
+      <section className="results-grid unicef-results-grid reveal is-visible">
+        {unicefRamadanResults.map((item) => <ResultMetricCard key={`${item.label}-${item.alt}`} {...item} />)}
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Creative Approach</h2>
+        <p>Ramadan is already a season of fasting and reflection. The act of not eating is built into the cultural rhythm — which made it uniquely powerful as a reframing device. Where other campaigns showed suffering as spectacle, this one asked a simpler question: what does the table look like for a child who has nothing to break fast with?</p>
+        <p>The animation held two worlds in the same frame. One table, full. Another, empty. The same celebration, two entirely different realities. No voiceover needed. The contrast did the work — and looped, quietly, so the viewer couldn't look away.</p>
+      </section>
+
+      <section className="case-video-block reveal is-visible">
+        <video controls playsInline preload="metadata" poster="" className="case-video-player">
+          <source src={unicefRayaVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+  );
+}
+
 function CaseStudyPage({ slug }) {
   if (slug === 'imoney') {
     return <ImoneyCaseStudyPage />;
+  }
+
+  if (slug === 'ramadan') {
+    return <UnicefRamadanCaseStudyPage />;
   }
 
   const item = caseStudies[slug];

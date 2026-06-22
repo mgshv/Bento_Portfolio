@@ -1076,6 +1076,10 @@ img {
   margin: 46px 0 60px;
 }
 
+.unicef-results-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .result-metric-card {
   min-height: 188px;
   padding: 18px;
@@ -1165,6 +1169,21 @@ img {
   line-height: 1.35;
   letter-spacing: -0.04em;
   font-weight: 700;
+}
+
+.case-video-block {
+  margin-top: 56px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  background: var(--card);
+}
+
+.case-video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
 }
 
 @media (max-width: 760px) {
@@ -1264,6 +1283,10 @@ img {
     margin: 28px 0 38px;
   }
 
+  .unicef-results-grid {
+    grid-template-columns: 1fr;
+  }
+
   .result-metric-card {
     min-height: 164px;
     padding: 14px;
@@ -1336,6 +1359,11 @@ img {
   .retargeting-card strong {
     font-size: 10px;
     line-height: 1.34;
+  }
+
+  .case-video-block {
+    margin-top: 34px;
+    border-radius: 14px;
   }
 }
 
@@ -1426,6 +1454,10 @@ img {
     margin: 30px 0 40px;
   }
 
+  .unicef-results-grid {
+    grid-template-columns: 1fr;
+  }
+
   .result-metric-card {
     min-height: 190px;
     padding: 15px;
@@ -1489,6 +1521,11 @@ img {
     font-size: 12px;
     line-height: 1.34;
     letter-spacing: -0.025em;
+  }
+
+  .case-video-block {
+    margin-top: 36px;
+    border-radius: 15px;
   }
 }
 
@@ -1579,6 +1616,10 @@ img {
     margin: 32px 0 42px;
   }
 
+  .unicef-results-grid {
+    grid-template-columns: 1fr;
+  }
+
   .result-metric-card {
     min-height: 205px;
     padding: 16px;
@@ -1635,5 +1676,10 @@ img {
     font-size: 13px;
     line-height: 1.34;
     letter-spacing: -0.025em;
+  }
+
+  .case-video-block {
+    margin-top: 38px;
+    border-radius: 15px;
   }
 }
