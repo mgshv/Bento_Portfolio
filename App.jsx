@@ -339,8 +339,8 @@ const unicefRamadanResults = [
 ];
 
 const phillipNovaResults = [
-  { image: phillipPerformance, alt: 'Performance result showing 22 percent cheaper CPL than the in-house creative while delivering higher volume leads' },
-  { image: phillipCreative, alt: 'Creative summary showing hook and visual, fast cuts and multiple points of motion, and bright colours in a short 15 second format' },
+  { label: 'Performance', image: phillipPerformance, alt: 'Performance result showing 22 percent cheaper CPL than the in-house creative while delivering higher volume leads' },
+  { label: 'Creative', image: phillipCreative, alt: 'Creative summary showing hook and visual, fast cuts and multiple points of motion, and bright colours in a short 15 second format' },
 ];
 
 function CaseMetaCard({ label, value }) {
@@ -361,9 +361,10 @@ function ResultMetricCard({ label, image, alt }) {
   );
 }
 
-function ImageMetricCard({ image, alt }) {
+function ImageMetricCard({ label, image, alt }) {
   return (
     <div className="result-metric-card image-only-card">
+      <Label>{label}</Label>
       <img src={image} alt={alt} />
     </div>
   );
