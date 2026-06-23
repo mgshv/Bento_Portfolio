@@ -29,6 +29,11 @@ import unicefResultCpa from './unicef-result-cpa.png';
 import unicefResult2x from './unicef-result-2x.png';
 import unicefResultEfficiency from './unicef-result-efficiency.png';
 import unicefRayaVideo from './unicef-raya-video.mp4';
+import phillipStoryboard from './phillip-storyboard.png';
+import phillipPerformance from './phillip-performance.png';
+import phillipCreative from './phillip-creative.png';
+import phillipRightGif from './phillip-right.gif';
+import phillipVideo from './phillip-video.mp4';
 
 const links = {
   email: 'mailto:muhammetgeldig@gmail.com',
@@ -52,7 +57,7 @@ const caseStudies = {
   },
   phillip: {
     label: 'Case Study',
-    title: 'Phillip Nova. Cutting CPA by 42%.',
+    title: 'Phillip Nova. Cutting CPL by 22%.',
     image: phillipImage,
     className: 'case-phillip',
   },
@@ -333,6 +338,11 @@ const unicefRamadanResults = [
   { label: 'Donations Acquired', image: unicefResultEfficiency, alt: 'Efficiency ratio increased by 14 percent with disproportionate return' },
 ];
 
+const phillipNovaResults = [
+  { image: phillipPerformance, alt: 'Performance result showing 22 percent cheaper CPL than the in-house creative while delivering higher volume leads' },
+  { image: phillipCreative, alt: 'Creative summary showing hook and visual, fast cuts and multiple points of motion, and bright colours in a short 15 second format' },
+];
+
 function CaseMetaCard({ label, value }) {
   return (
     <div className="case-meta-card">
@@ -346,6 +356,14 @@ function ResultMetricCard({ label, image, alt }) {
   return (
     <div className="result-metric-card">
       <Label>{label}</Label>
+      <img src={image} alt={alt} />
+    </div>
+  );
+}
+
+function ImageMetricCard({ image, alt }) {
+  return (
+    <div className="result-metric-card image-only-card">
       <img src={image} alt={alt} />
     </div>
   );
@@ -486,6 +504,66 @@ function UnicefRamadanCaseStudyPage() {
   );
 }
 
+
+function PhillipNovaCaseStudyPage() {
+  return (
+    <main className="imoney-case-page">
+      <a className="case-back-pill reveal is-visible" href="#/" aria-label="Go back home">← Back home</a>
+
+      <section className="imoney-case-intro case-section-card reveal is-visible">
+        <h1>Phillip Nova. Cutting CPL by 22%.</h1>
+        <p>Outperformed the brand's own team with a single ad — 22% cheaper CPL, higher volume.</p>
+      </section>
+
+      <section className="case-meta-grid reveal is-visible">
+        <CaseMetaCard label="Role" value="Creative Direction and Execution" />
+        <CaseMetaCard label="Client" value="Phillip Nova" />
+        <CaseMetaCard label="Year" value="2024" />
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Challenge</h2>
+        <p>Phillip Nova already had an in-house creative team. What they didn't have was an ad that could outperform it.</p>
+        <p>After seeing results from a previous Meta campaign I'd built for them, they came back with a direct challenge: build something that beats what we're already running. No brief about brand guidelines or campaign vision — just a performance target and an expectation.</p>
+        <p>The brief was effectively a head-to-head.</p>
+      </section>
+
+      <section className="dual-media-grid reveal is-visible">
+        <div className="case-image-block media-card">
+          <img src={phillipStoryboard} alt="Phillip Nova storyboard showing the four-step creative sequence" />
+        </div>
+        <div className="case-image-block media-card media-card-gif">
+          <img src={phillipRightGif} alt="Animated Phillip Nova ETF ad preview" />
+        </div>
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Results</h2>
+        <p>The brief wasn't really about ETFs. It was about whether a category-aware creative could beat a brand-comfortable one. The answer was yes — because knowing the audience mattered more than knowing the brand. When you build for the person who doesn't yet believe they're a customer, you find room that the in-house team, by definition, can't see.</p>
+      </section>
+
+      <section className="results-grid phillip-results-grid reveal is-visible">
+        {phillipNovaResults.map((item) => <ImageMetricCard key={item.alt} {...item} />)}
+      </section>
+
+      <section className="case-copy-block reveal is-visible">
+        <h2>Creative Approach</h2>
+        <p>The existing in-house creative was built like most fintech ads are: clean, safe, on-brand. The problem with safe ads is that they blend into the feed of people who've already decided they're not interested in investing.</p>
+        <p>The audience we were after — beginners with side-income aspirations — weren't ignoring ETFs because they didn't care. They were ignoring them because every ad assumed they already understood the category. The entry point was wrong.</p>
+        <p>The strategic shift was simple: lead with the outcome they wanted (financial freedom, a New Year resolution already written on their phone), not the product. Scene by scene, the animation walked the viewer through a journey from aspiration to action — with a bouncy ball mechanic in the growth sequence that made the compounding nature of ETF returns feel instinctive rather than abstract. You don't need to understand what ETFs are to understand something going up.</p>
+        <p>The production constraints — 30 seconds, motion-led, bright shifting palettes — were treated as advantages. Fast cuts and color changes that would cause fatigue in a financial services brand actually signaled something different: this is not your bank's ad.</p>
+      </section>
+
+      <section className="case-video-block reveal is-visible">
+        <video controls playsInline preload="metadata" poster="" className="case-video-player">
+          <source src={phillipVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+  );
+}
+
 function CaseStudyPage({ slug }) {
   if (slug === 'imoney') {
     return <ImoneyCaseStudyPage />;
@@ -493,6 +571,10 @@ function CaseStudyPage({ slug }) {
 
   if (slug === 'ramadan') {
     return <UnicefRamadanCaseStudyPage />;
+  }
+
+  if (slug === 'phillip') {
+    return <PhillipNovaCaseStudyPage />;
   }
 
   const item = caseStudies[slug];

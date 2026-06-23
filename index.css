@@ -1683,3 +1683,76 @@ img {
     border-radius: 15px;
   }
 }
+
+/* v22 Phillip Nova case study */
+.dual-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 46px 0 60px;
+}
+
+.media-card {
+  min-height: 460px;
+  display: grid;
+  place-items: center;
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.media-card:not(.media-card-gif) img {
+  object-fit: contain;
+}
+
+.phillip-results-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.image-only-card {
+  min-height: 206px;
+  padding: 0;
+  display: block;
+}
+
+.image-only-card img {
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 760px) {
+  .dual-media-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 30px 0 40px;
+  }
+
+  .media-card {
+    min-height: 220px;
+    border-radius: 15px;
+  }
+
+  .media-card.media-card-gif {
+    min-height: 260px;
+  }
+
+  .phillip-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-only-card {
+    min-height: 144px;
+    border-radius: 15px;
+  }
+
+  .image-only-card img {
+    object-fit: contain;
+  }
+}
